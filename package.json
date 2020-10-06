@@ -1,0 +1,32 @@
+{
+  "name": "plinko",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack",
+    "start": "webpack-dev-server --hot",
+    "compile": "cross-env NODE_ENV=trajectories webpack",
+    "start:grt": "node ./src/scripts/shared/generateResultTables/index.js",
+    "gen-result-table": "yarn compile && yarn start:grt",
+    "grt": "yarn gen-result-table"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "cross-env": "^7.0.2",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "@types/matter-js": "^0.14.5",
+    "css-loader": "^4.2.1",
+    "dotenv-webpack": "^2.0.0",
+    "file-loader": "^6.0.0",
+    "matter-js": "^0.14.2",
+    "pixi.js-legacy": "^5.3.3",
+    "puppeteer": "^5.2.1",
+    "style-loader": "^1.2.1"
+  }
+}
